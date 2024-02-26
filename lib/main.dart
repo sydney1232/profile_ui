@@ -34,14 +34,25 @@ class _MyHomePageState extends State<MyHomePage> {
             slivers: [
               SliverAppBar(
                 expandedHeight: 400,
-                backgroundColor: Colors.yellow,
+                backgroundColor: Colors.black,
                 flexibleSpace: FlexibleSpaceBar(
                   background: Container(
                     decoration: BoxDecoration(
-                        color: Colors.grey,
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage("assets/images/emma.jpg"))),
+                      color: Colors.grey,
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage("assets/images/emma.jpg"),
+                      ),
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              colors: [
+                            Colors.black,
+                            Colors.black.withOpacity(.3)
+                          ])),
+                    ),
                   ),
                 ),
               )
