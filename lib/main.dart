@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:profile_ui/animation/FadeAnimation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -46,12 +47,30 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     child: Container(
                       decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              begin: Alignment.bottomRight,
-                              colors: [
-                            Colors.black,
-                            Colors.black.withOpacity(.3)
-                          ])),
+                        gradient: LinearGradient(
+                            begin: Alignment.bottomRight,
+                            colors: [
+                              Colors.black,
+                              Colors.black.withOpacity(.3)
+                            ]),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            FadeAnimation(
+                                1,
+                                Text("Emma Watson",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      fontSize: 40,
+                                    )))
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                 ),
