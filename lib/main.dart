@@ -2,6 +2,7 @@ import 'dart:ffi';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:profile_ui/animation/FadeAnimation.dart';
 
 void main() {
@@ -19,6 +20,34 @@ class MyApp extends StatelessWidget {
       home: const MyHomePage(),
     );
   }
+}
+
+Widget makeVideo({image}) {
+  return AspectRatio(
+    aspectRatio: 1.5 / 1,
+    child: Container(
+      margin: EdgeInsets.only(right: 20),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        image: DecorationImage(image: AssetImage(image), fit: BoxFit.cover),
+      ),
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.bottomRight,
+              colors: [Colors.black, Colors.black.withOpacity(.3)]),
+        ),
+        child: const Align(
+          alignment: Alignment.center,
+          child: Icon(
+            Icons.play_arrow,
+            color: Colors.white,
+            size: 50,
+          ),
+        ),
+      ),
+    ),
+  );
 }
 
 class MyHomePage extends StatefulWidget {
@@ -146,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                       //NATIONALITY
                       FadeAnimation(
-                        1.6,
+                        1.7,
                         Text(
                           "Nationality",
                           style: TextStyle(
@@ -158,7 +187,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       SizedBox(height: 10),
                       FadeAnimation(
-                        1.6,
+                        1.7,
                         Text(
                           "British",
                           style: TextStyle(
@@ -166,6 +195,35 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                       ),
+
+                      SizedBox(height: 20),
+
+                      FadeAnimation(
+                        1.8,
+                        Text(
+                          "Video",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 10),
+
+                      FadeAnimation(
+                          1,
+                          Container(
+                            height: 200,
+                            child: ListView(
+                              scrollDirection: Axis.horizontal,
+                              children: [
+                                makeVideo(image: "assets/images/emma-1.jpg"),
+                                makeVideo(image: "assets/images/emma-2.jpg"),
+                                makeVideo(image: "assets/images/emma-3.jpg"),
+                              ],
+                            ),
+                          )),
                     ],
                   ),
                 )
