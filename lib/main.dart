@@ -1,3 +1,6 @@
+import 'dart:ffi';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:profile_ui/animation/FadeAnimation.dart';
 
@@ -115,6 +118,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                       SizedBox(height: 40),
+
+                      //BORN
                       FadeAnimation(
                         1.6,
                         Text(
@@ -125,7 +130,42 @@ class _MyHomePageState extends State<MyHomePage> {
                             color: Colors.white,
                           ),
                         ),
-                      )
+                      ),
+                      SizedBox(height: 10),
+                      FadeAnimation(
+                        1.6,
+                        Text(
+                          "April, 15th 1990, Paris, France",
+                          style: TextStyle(
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(height: 20),
+
+                      //NATIONALITY
+                      FadeAnimation(
+                        1.6,
+                        Text(
+                          "Nationality",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      FadeAnimation(
+                        1.6,
+                        Text(
+                          "British",
+                          style: TextStyle(
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 )
