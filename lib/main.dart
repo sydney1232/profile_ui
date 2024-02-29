@@ -61,20 +61,75 @@ class _MyHomePageState extends State<MyHomePage> {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             FadeAnimation(
-                                1,
-                                Text("Emma Watson",
+                              1,
+                              Text(
+                                "Emma Watson",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 40,
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 20),
+                            Row(
+                              children: [
+                                FadeAnimation(
+                                  1.2,
+                                  Text(
+                                    "60 Videos",
                                     style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                      fontSize: 40,
-                                    )))
+                                        color: Colors.grey, fontSize: 16),
+                                  ),
+                                ),
+                                SizedBox(width: 50),
+                                FadeAnimation(
+                                  1.3,
+                                  Text(
+                                    "240k Subscribers",
+                                    style: TextStyle(
+                                        color: Colors.grey, fontSize: 16),
+                                  ),
+                                ),
+                              ],
+                            )
                           ],
                         ),
                       ),
                     ),
                   ),
                 ),
-              )
+              ),
+              SliverList(
+                  delegate: SliverChildListDelegate([
+                Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      FadeAnimation(
+                        1.6,
+                        Text(
+                          "Emma Charlotte Duerre Watson was born in Paris, France, to English parents, Jacqueline Luesby and Chris Watson, both lawyers. She moved to Oxfordshire when she was five, where she attended the Dragon School.",
+                          style: TextStyle(color: Colors.grey, height: 1.7),
+                        ),
+                      ),
+                      SizedBox(height: 40),
+                      FadeAnimation(
+                        1.6,
+                        Text(
+                          "Born",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ]))
             ],
           )
         ],
