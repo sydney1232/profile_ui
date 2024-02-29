@@ -212,23 +212,49 @@ class _MyHomePageState extends State<MyHomePage> {
                       SizedBox(height: 10),
 
                       FadeAnimation(
-                          1,
-                          Container(
-                            height: 200,
-                            child: ListView(
-                              scrollDirection: Axis.horizontal,
-                              children: [
-                                makeVideo(image: "assets/images/emma-1.jpg"),
-                                makeVideo(image: "assets/images/emma-2.jpg"),
-                                makeVideo(image: "assets/images/emma-3.jpg"),
-                              ],
-                            ),
-                          )),
+                        1,
+                        Container(
+                          height: 200,
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              makeVideo(image: "assets/images/emma-1.jpg"),
+                              makeVideo(image: "assets/images/emma-2.jpg"),
+                              makeVideo(image: "assets/images/emma-3.jpg"),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 120)
                     ],
                   ),
                 )
               ]))
             ],
+          ),
+          Positioned.fill(
+            bottom: 50,
+            child: Container(
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: FadeAnimation(
+                  2,
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 30),
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.yellow.shade700,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Align(
+                        child: Text(
+                      "Follow",
+                      style: TextStyle(color: Colors.white),
+                    )),
+                  ),
+                ),
+              ),
+            ),
           )
         ],
       ),
