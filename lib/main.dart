@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 FadeAnimation(
                                   1.3,
                                   Text(
-                                    "240k Subscribers",
+                                    "360k Subscribers",
                                     style: TextStyle(
                                         color: Colors.grey, fontSize: 16),
                                   ),
@@ -140,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       FadeAnimation(
-                        1.6,
+                        1.8,
                         Text(
                           "Emma Charlotte Duerre Watson was born in Paris, France, to English parents, Jacqueline Luesby and Chris Watson, both lawyers. She moved to Oxfordshire when she was five, where she attended the Dragon School.",
                           style: TextStyle(color: Colors.grey, height: 1.7),
@@ -150,7 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                       //BORN
                       FadeAnimation(
-                        1.6,
+                        1.8,
                         Text(
                           "Born",
                           style: TextStyle(
